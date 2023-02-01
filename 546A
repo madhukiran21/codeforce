@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int cost = in.nextInt();
+        int initialMoney = in.nextInt();
+        int noBananas = in.nextInt();
+        int sum = cost;
+        for (int i = 2; i <= noBananas; i++) {
+            sum += i * cost;
+        }
+        if (sum <= initialMoney)
+            System.out.println(0);
+        else
+            System.out.println(sum - initialMoney);
+    }
+}
